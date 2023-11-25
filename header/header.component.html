@@ -1,0 +1,10 @@
+<header class="app-header">
+  <div class="left-section">
+    <a routerLink="/">Home</a>
+  </div>
+  <div class="right-section">
+    <a *ngIf="!isAuth" routerLink="/login">Login</a>
+    <a *ngIf="!isAuth" routerLink="/singup">Signup</a>
+    <button *ngIf="isAuth" (click)="logout()">Logout</button>
+  </div>
+</header>

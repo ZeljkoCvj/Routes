@@ -1,0 +1,33 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+
+  .left-section {
+    a {
+      text-decoration: none;
+      color: white;
+      margin-right: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .right-section {
+    display: flex;
+
+    a {
+      text-decoration: none;
+      color: white;
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
