@@ -5,6 +5,7 @@
   <div class="right-section">
     <a *ngIf="!isAuth" routerLink="/login">Login</a>
     <a *ngIf="!isAuth" routerLink="/singup">Signup</a>
+    <a *ngIf="isAuth" routerLink="/adduser">Add User</a>
     <button *ngIf="isAuth" (click)="logout()">Logout</button>
   </div>
 </header>

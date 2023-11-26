@@ -1,0 +1,10 @@
+<h1>Edit User</h1>
+
+<p>Name: {{ user?.name }}</p>
+<p>Height: {{ user?.height }}</p>
+<p>Weight: {{ user?.weight }}</p>
+<p>Eye color: {{ user?.eyeColor }}</p>
+<p>Hair Color: {{ user?.hairColor }}</p>
+
+<button (click)="updateUser()">Update User</button>
+<button (click)="deleteUser(user.id)">Delete User</button>

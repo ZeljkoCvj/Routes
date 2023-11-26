@@ -1,0 +1,27 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+.app-header .left-section a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  font-weight: bold;
+}
+.app-header .right-section {
+  display: flex;
+}
+.app-header .right-section a {
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+}
+.app-header .right-section button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=header.component.css.map */
