@@ -1,0 +1,19 @@
+.custom-input {
+  border-radius: 10px;
+  border: 2px solid #3498db;
+  padding: 10px;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-input:focus {
+  outline: none;
+  border-color: #2ecc71;
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+.input-group,
+h2 {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+}

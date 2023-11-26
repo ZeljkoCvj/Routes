@@ -9,6 +9,7 @@ import { CanActiveGuard } from "./guards/can-active.guard";
 import { Resolvere } from "./guards/resolve.guard";
 import { AddComponent } from "./content/add/add.component";
 import { EditComponent } from "./content/edit/edit.component";
+import { SearchComponent } from "./search/search.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -22,8 +23,9 @@ const routes: Routes = [
   },
   { path: "adduser", component: AddComponent, canActivate: [CanActiveGuard] },
   { path: "edit/:id", component: EditComponent, canActivate: [CanActiveGuard] },
-  // { path: "not-found", component: NotfoundComponent },
-  // { path: "**", redirectTo: "/not-found" },
+  { path: "search", component: SearchComponent, canActivate: [CanActiveGuard] },
+  { path: "not-found", component: NotfoundComponent },
+  { path: "**", redirectTo: "/not-found" },
 ];
 
 @NgModule({

@@ -1,10 +1,62 @@
-<h1>Edit User</h1>
+<h1 *ngIf="users">Edit or Delete User</h1>
+<h1 *ngIf="!users">Delete User</h1>
 
-<p>Name: {{ user?.name }}</p>
-<p>Height: {{ user?.height }}</p>
-<p>Weight: {{ user?.weight }}</p>
-<p>Eye color: {{ user?.eyeColor }}</p>
-<p>Hair Color: {{ user?.hairColor }}</p>
+<form
+  [formGroup]="userForm"
+  (ngSubmit)="onSubmit()"
+  matTooltip="Click to input field and edit  "
+>
+  <label for="name">Ime:</label>
+  <input
+    type="text"
+    id="name"
+    formControlName="name"
+    required
+    (input)="onInputChange()"
+  />
 
-<button (click)="updateUser()">Update User</button>
-<button (click)="deleteUser(user.id)">Delete User</button>
+  <label for="height">Visina:</label>
+  <input
+    type="number"
+    id="height"
+    formControlName="height"
+    (input)="onInputChange()"
+    required
+  />
+
+  <label for="weight">Težina:</label>
+  <input
+    type="number"
+    id="weight"
+    formControlName="weight"
+    required
+    (input)="onInputChange()"
+  />
+
+  <label for="eyeColor">Boja očiju:</label>
+  <input
+    type="text"
+    id="eyeColor"
+    formControlName="eyeColor"
+    required
+    (input)="onInputChange()"
+  />
+
+  <label for="hairColor">Boja kose:</label>
+  <input
+    type="text"
+    id="hairColor"
+    formControlName="hairColor"
+    required
+    (input)="onInputChange()"
+  />
+
+  <button
+    [disabled]="!userForm.valid || !users"
+    type="submit"
+    (click)="updateUser(user.id)"
+  >
+    Edit user
+  </button>
+  <button (click)="deleteUser(user.id, user.name)">Delete User</button>
+</form>

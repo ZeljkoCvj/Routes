@@ -1,33 +1,43 @@
 .app-header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  align-items: center;
+  padding: 1rem;
   background-color: #333;
   color: white;
+}
 
-  .left-section {
-    a {
-      text-decoration: none;
-      color: white;
-      margin-right: 20px;
-      font-weight: bold;
-    }
-  }
+.left-section a {
+  text-decoration: none;
+  color: white;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
-  .right-section {
-    display: flex;
+.right-section a,
+.right-section button {
+  text-decoration: none;
+  color: white;
+  margin-left: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
 
-    a {
-      text-decoration: none;
-      color: white;
-      margin-right: 10px;
-    }
+.right-section a:hover,
+.right-section button:hover {
+  text-decoration: underline;
+}
 
-    button {
-      background-color: #e74c3c;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  }
+.right-section button {
+  background-color: #d9534f;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.right-section button:hover {
+  background-color: #c9302c;
 }

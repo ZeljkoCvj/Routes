@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { MatSnackBar } from "@angular/material/snack-bar";
 import { Observable, of } from "rxjs";
 
 @Injectable({
@@ -91,6 +92,20 @@ export class UserAccountService {
           resolve({ message: "User deleted successfully!" });
         } else {
           reject({ message: "User not found!" });
+        }
+      } catch (err) {
+        reject({ message: "Error deleting user!" });
+      }
+    });
+  }
+
+  updateUser(userId: number, newUser: any): Promise<any> {
+    return new Promise((resolve, reject) => {
+      try {
+        const index = this.people.findIndex((user) => user.id === userId);
+        if (index !== -1) {
+          this.people[index] = { ...this.people[index], ...newUser };
+          resolve("Uspesno izmenjeno");
         }
       } catch (err) {
         reject({ message: "Error deleting user!" });

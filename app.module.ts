@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
@@ -16,7 +17,13 @@ import { Resolvere } from "./guards/resolve.guard";
 import { ReactiveFormsModule } from "@angular/forms";
 import { EditComponent } from "./content/edit/edit.component";
 import { AddComponent } from "./content/add/add.component";
-import { StartComponent } from './content/start/start.component';
+import { StartComponent } from "./content/closedialog/start.component";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { MatButtonModule } from "@angular/material/button";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { MatTooltipModule } from "@angular/material/tooltip";
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -30,15 +37,21 @@ import { StartComponent } from './content/start/start.component';
     EditComponent,
     AddComponent,
     StartComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
+    NoopAnimationsModule,
     AppRoutingModule,
+    MatSnackBarModule,
     FormsModule,
     AngularFireModule.initializeApp(enviroment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
     ReactiveFormsModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatTooltipModule,
   ],
   providers: [Resolvere],
   bootstrap: [AppComponent],

@@ -1,11 +1,16 @@
 <h2>User Information</h2>
-<div *ngFor="let i of user">
-  <a (click)="editUser(i.id)">
+<div class="user-list">
+  <div
+    *ngFor="let i of user"
+    class="user-item"
+    (click)="editUser(i.id)"
+    matTooltip="Click to Delete or Edit User"
+  >
     <p>Name: {{ i.name }}</p>
     <p>Height: {{ i.height }}</p>
     <p>Weight: {{ i.weight }}</p>
     <p>Eye color: {{ i.eyeColor }}</p>
-    <p>Hair Color:{{ i.hairColor }}</p>
-  </a>
+    <p>Hair Color: {{ i.hairColor }}</p>
+  </div>
 </div>
 <div class="btnWrapper"></div>
