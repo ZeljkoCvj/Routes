@@ -18,7 +18,7 @@ export class AddComponent implements OnInit {
   ) {}
   ngOnInit() {
     this.userForm = this.fb.group({
-      id: [Math.floor(Math.random() * 1000000), Validators.required],
+      id: [Math.floor(Math.random() * 100), Validators.required],
       name: ["", Validators.required],
       height: [null, Validators.required],
       weight: [null, Validators.required],

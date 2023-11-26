@@ -24,8 +24,8 @@ const routes: Routes = [
   { path: "adduser", component: AddComponent, canActivate: [CanActiveGuard] },
   { path: "edit/:id", component: EditComponent, canActivate: [CanActiveGuard] },
   { path: "search", component: SearchComponent, canActivate: [CanActiveGuard] },
-  { path: "not-found", component: NotfoundComponent },
-  { path: "**", redirectTo: "/not-found" },
+  // { path: "not-found", component: NotfoundComponent },
+  // { path: "**", redirectTo: "/not-found" },
 ];
 
 @NgModule({

@@ -17,3 +17,68 @@ h2 {
   display: flex;
   justify-content: center;
 }
+/* search.component.scss */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.user-card {
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 16px;
+
+      h5 {
+        color: #007bff;
+      }
+
+      .card-details {
+        padding: 0;
+        list-style: none;
+        cursor: pointer;
+
+        li {
+          margin-bottom: 8px;
+
+          strong {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+}

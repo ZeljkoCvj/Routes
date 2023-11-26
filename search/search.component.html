@@ -1,11 +1,32 @@
-<h2>Search Users</h2>
-<div class="input-group">
-  <input
-    class="form-control custom-input"
-    placeholder="Unesi ime vozača"
-    id="exampleInput"
-    type="text"
-    (input)="inputField()"
-    [(ngModel)]="inputStr"
-  />
+<!-- search.component.html -->
+<div class="container mt-4">
+  <h2 class="heading">Search Users</h2>
+  <div class="input-container">
+    <input
+      class="custom-input"
+      id="exampleInput"
+      type="text"
+      (input)="inputField()"
+      [(ngModel)]="inputStr"
+    />
+  </div>
+  <div class="user-cards">
+    <div
+      class="user-card"
+      *ngFor="let user of arrayFilter"
+      (click)="edit(user.id)"
+    >
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ user.name }}</h5>
+          <ul class="card-details">
+            <li><strong>Height:</strong> {{ user.height }}</li>
+            <li><strong>Weight:</strong> {{ user.weight }}</li>
+            <li><strong>Eye Color:</strong> {{ user.eyeColor }}</li>
+            <li><strong>Hair Color:</strong> {{ user.hairColor }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
